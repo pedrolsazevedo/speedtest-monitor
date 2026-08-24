@@ -1,4 +1,4 @@
-FROM telegraf:1.38
+FROM telegraf:1.39
 
 RUN apt-get update && \
     apt-get install -y --no-install-recommends curl gnupg apt-transport-https && \
