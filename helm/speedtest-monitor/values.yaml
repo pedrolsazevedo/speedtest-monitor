@@ -25,7 +25,7 @@ influxdb2:
 grafana:
   image:
     repository: grafana/grafana
-    tag: "13.0.2"
+    tag: "13.2.0"
   adminUser: admin
   adminPassword: admin
   datasources:
