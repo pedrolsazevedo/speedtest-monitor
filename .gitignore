@@ -2,3 +2,4 @@
 *.swp
 *.swo
 helm/speedtest-monitor/charts/*.tgz
+.claude/

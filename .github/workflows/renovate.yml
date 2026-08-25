@@ -3,8 +3,8 @@ name: Renovate
 
 on:
   schedule:
-    # Run every Monday at 5am UTC (2am São Paulo)
     - cron: '0 5 * * 1'
+      timezone: "America/Sao_Paulo"
   workflow_dispatch:
     inputs:
       logLevel:
@@ -13,10 +13,10 @@ on:
         default: 'debug'
         type: choice
         options:
-          - debug
           - info
-          - warn
+          - debug
           - error
+          - warn
 
 permissions:
   contents: write
