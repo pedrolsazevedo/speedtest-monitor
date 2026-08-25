@@ -8,12 +8,10 @@
   "timezone": "America/Sao_Paulo",
   "labels": ["dependencies"],
   "dependencyDashboard": true,
+  "github-actions": {
+    "enabled": false
+  },
   "packageRules": [
-    {
-      "description": "Group GitHub Actions updates",
-      "matchManagers": ["github-actions"],
-      "groupName": "GitHub Actions"
-    },
     {
       "description": "Group Docker image updates (Dockerfile + docker-compose)",
       "matchManagers": ["dockerfile", "docker-compose"],

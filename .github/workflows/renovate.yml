@@ -4,19 +4,21 @@ name: Renovate
 on:
   schedule:
     - cron: '0 5 * * 1'
-      timezone: "America/Sao_Paulo"
+      timezone: 'America/Sao_Paulo'
   workflow_dispatch:
     inputs:
       logLevel:
         description: 'Log level'
         required: false
-        default: 'debug'
+        default: 'info'
         type: choice
         options:
           - info
           - debug
           - error
           - warn
+  issues:
+    types: [edited]
 
 permissions:
   contents: write
@@ -27,6 +29,7 @@ jobs:
   renovate:
     name: Renovate Dependencies
     runs-on: ubuntu-latest
+    if: github.event_name != 'issues' || contains(github.event.issue.title, 'Dependency Dashboard')
 
     steps:
       - name: Checkout code
