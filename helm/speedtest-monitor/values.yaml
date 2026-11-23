@@ -10,7 +10,7 @@ telegraf:
 influxdb2:
   image:
     repository: influxdb
-    tag: "2.9"
+    tag: "2.10"
   adminUser:
     organization: home
     bucket: speedtest
@@ -25,7 +25,7 @@ influxdb2:
 grafana:
   image:
     repository: grafana/grafana
-    tag: "13.2.0"
+    tag: "13.3.1"
   adminUser: admin
   adminPassword: admin
   datasources:
